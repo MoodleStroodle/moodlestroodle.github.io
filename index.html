@@ -5,31 +5,237 @@
 	body {background-color: pink; font-family:courier; text-align:center}
 	h1 {font-size:300%;}
 	h2 {font-size:100%;}
-	a:hover {font-weight:700; color:white}
+	a:hover {font-weight:700; color:red}
 	div {background-color:white;}
 	pre {font-family:courier;}
-	table {text-align:center;}
+	table {table-layout: fixed;
+  	width: 100%;
+  	border-collapse: collapse;
+  	border: 3px solid purple;}
+	thead th:nth-child(1) {
+ 	width: 30%;
+	}
+	thead th:nth-child(2) {
+  	width: 20%;
+	}
+	thead th:nth-child(3) {
+  	width: 15%;
+	}	
+	thead th:nth-child(4) {
+  	width: 35%;
+	}
+	th,
+	td {
+  	padding: 20px;
+	}
+	table, th, td {
+ 	border: 1px solid pink;
+	}
+	button 
+	{
+	display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #a32985;
+    color: white;
+	border: none;
+    cursor: pointer;
+    font-size: 16px;
+	}
+	button:hover {background-color: #0056b3;}
 </style>
-	<title> Index </title>
+<script>
+	function changeImportantTextColor() 
+	{
+    	const importantSpans = document.querySelectorAll('#important');
+    	importantSpans.forEach(span => {
+        if (span.style.color === 'red') 
+		{
+            span.style.color = 'blue';
+            span.style.fontWeight = 'normal';
+        }
+		else 
+		{
+            span.style.color = 'red';
+            span.style.fontWeight = 'bold';
+        }
+    });
+}
+</script>
+	<title> Kuru Toga Guide </title>
 </head>
 <body>
 	<!-- headers -->
-		<h1><strong>Header 1</strong></h1>
-		<h2>Header 2.</h2>
-		<hr></hr>
+		<img src = "images__2_-removebg-preview.png" alt = "A picture of a weird bike." width = "300" length = "300">
+		<h1><strong>2024 Kuru Toga Guide</strong></h1>
+		<blockquote cite = "https://writingforpainandpleasure.com/2017/07/11/uni-kuru-toga-mechanical-pencil/">
+			The main feature of the Kuru Toga is given away by the little logo on the barrel—Kuru Toga Engine. This is the internal mechanism that rotates the pencil’s lead, just a little bit, every time it’s pressed to a writing surface, thereby keeping a uniformly sharp point on the lead.
+This system has been popular with a number of reviewers over the years, and the general consensus has been that it works rather well.
+		</blockquote>
+		<p> - from Writing for Pain and Pleasure </p>
+		<button type = "button" onclick = "changeImportantTextColor()">Mark important text.</button>
+		<p><br></p>
 	<div id = "body text">
-		<p>
-			This is a paragraph.<br> This is still the same paragraph.
-		</p>
-		<a href = "https://www.w3schools.com/html/html_attributes.asp"> This is a link. </a>
-		<pre style = "font-family: courier;">
-asfjsasdjaslkdjsadklsajdsakldjs    askdasjdasjda]
+		<table style = "text-align:center;">
+			<thead>
+				<tr>
+					<td> <strong>Model Name</strong> </td>
+					<td> <strong>Available Lead Sizes</strong> </td>
+					<td> <strong>Length</strong> </td>
+					<td> <strong>Diameter</strong> </td>
+					<td> <strong>Weight</strong> </td>
+					<td> <strong>Available Colors/Styles</strong> </td>
+					<td> <strong>Links to buy</strong> </td>
+					<td> <strong>Additional Info</strong></td>
+				</tr>
+			</thead>
+			<tr>
+				<td valign="middle" align="center"><img id = "standard" src = "https://www.unibrands.co/cdn/shop/products/uniball_MechPencils_KuruToga_0.5MM_BlueBlack_Front_WebImages.jpg?v=1680202192" alt = "Standard." width = "200"> <br> Standard </td>
+				<td> 
+					<ul>
+						<li>0.3mm</li>
+						<li>0.5mm</li>
+						<li>0.7mm</li>
+					</ul>
+				</td>
+				<td> 14.2cm </td>
+				<td> 10.2mm </td>
+				<td> 0.35oz </td>
+				<td> 
+					<ul>
+						<li>Black</li>
+						<li style = "color:blue;">Blue</li>
+						<li style = "color:pink;">Pink</li>
+						<li style = "color:silver;">Silver</li>
+						<li style = "color:green">Green</li>
+						<li>Disney Collabs</li>
+						<li>And more...</li>
+					</ul>
+				</td>
+				<td> 
+					<ul>
+						 <li><a href = "https://www.amazon.com/Kurutoga-Mechanical-Pencil-Standard-M54501P-68/dp/B00M7RCXBI"> Amazon </a> </li>
+						 <li><a href = "https://www.jetpens.com/search?q=attr_categories_id%3A851+OR+id%3A10372+OR+id%3A39543+OR+id%3A39544"> Jetpens </a> </li>
+						 <li><a href = "https://bungu.store/en-us/products/kuru-toga-standard-model-0-5mm-mitsubishi-pencil"> Bungu </a> </li>
+				</td>
+				<td> <p> "The Uni Kuru Toga Standard & US are the <span id = "important">most basic</span> mechanical pencils in the lineup. It has a <span id = "important">clear grip </span>section where you can see the mechanism at work while you write. The grip has <span id = "important">shallow grooves</span> that make it easier to hold."</p> <br> <span id = "important">$7.00</span></p></td>
+			</tr>
+			<tr>
+				<td valign="middle" align="center"><img id = "advance" src = "https://www.unibrands.co/cdn/shop/files/uniball_WebImages_KuruTogaAdvancedLTO_pink.png?v=1709762398" alt = "Advance." width = "200"> <br> Advance </td>
+				<td> 
+					<ul>
+						<li>0.3mm</li>
+						<li>0.5mm</li>
+						<li>0.7mm</li>
+					</ul>
+				</td>
+				<td> 13.9cm </td>
+				<td> 10.3mm </td>
+				<td> 0.44oz </td>
+				<td>
+					<ul>
+						<li style = "color:pink;">Baby Pink</li>
+						<li style = "color:navy;">Navy Blue</li>
+						<li style = "color:rgb(116, 53, 141);">Lavender</li>
+						<li style = "color:red;">Red</li>
+						<li style = "color:rgb(122, 111, 111);">White</li>
+						<li style = color:green;>Lime Green</li>
+						<li>Studio Ghibli Collabs</li>
+						<li>And more...</li>
+					</ul>
+				</td>
+				<td> 
+					<ul>
+						 <li><a href = "https://www.amazon.com/uni-Kuru-Toga-Advance-Mechanical/dp/B06XV61B3T"> Amazon </a> </li>
+						 <li><a href = "https://www.jetpens.com/Uni-Kuru-Toga-Advance-Mechanical-Pencils/ct/5687?&f=6899e7f15372d0331e7007fbf57bff50"> Jetpens </a> </li>
+						 <li><a href = "https://bungu.store/en-us/products/kuru-toga-advance-ghibli-edition-mechanical-pencil-uni-mitsubishi-pencil"> Bungu </a> </li>
+				</td>
+				<td> <p>"The Uni Kuru Toga Advance uses the updated W Speed Engine that rotates the lead <span id = "important">twice as fast as that of standard Kuru Toga Mechanical Pencils</span>. It also has a sliding lead sleeve.
 
-slifspodfdsoofis  opfdsoip sdpoifidsop pdoiisfiopsfd
-
-soifsd odfiposdf  fdsopisdiopsdipsd dfpoisdfiop
-		</pre>
-		<img src = "5th bike.jpg" alt = "A picture of a weird bike.">s
+					The Advance looks similar to the Pipe Slide, but it has a metal-plated tip nose cone and clip. The heavier components help give the pencil a <span id = "important">lower center of gravity</span>, which can make it feel more balanced than the lighter Pipe Slide."</p> <br> <span id = "important">$8.5 - $15.50</span></td>
+			</tr>
+			<tr>
+				<td valign="middle" align="center"><img id = "ks" src = "ks.jpg" alt = "KS." width = "200"> <br><br> KS </td>
+				<td> 
+					<ul>
+						<li>0.3mm</li>
+						<li>0.5mm</li>
+					</ul>
+				</td>
+				<td> 14.5cm </td>
+				<td> 11.1mm </td>
+				<td> 0.4oz </td>
+				<td>
+					<ul>
+						<li style = "color:blue;">Ice Blue</li>
+						<li>Black</li>
+						<li style = "color:palevioletred;">Coral Pink</li>
+						<li style = "color:green;">Herb Green</li>
+						<li style = "color:lightgreen;">Lime Green</li>
+						<li style = "color:rgb(112, 111, 70);">Cream Yellow</li>
+						<li style = "color:navy;">Navy Blue</li>
+						<li style = "color:gray;">Metallic Gray</li>
+						<li>Sanrio Collabs</li>
+					</ul>
+				</td>
+				<td> 
+					<ul>
+						 <li><a href = "https://www.amazon.com/Mitsubishi-Pencil-Mechanical-Kurutoga-M5KS1P-9/dp/B0C3M27Q13?th=1"> Amazon </a> </li>
+						 <li><a href = "https://www.jetpens.com/Uni-Kuru-Toga-KS-Mechanical-Pencil-0.5-mm-Light-Gray/pd/36761"> Jetpens </a> </li>
+						 <li><a href = "https://bungu.store/en-us/products/limited-new-kuru-toga-standard-mechanical-pencil-mitsubishi-pencil"> Bungu </a> </li>
+				</td>
+				<td><p>"Thanks to its <span id = "important">minimalist design,</span> the Uni Kuru Toga KS won’t distract you in the middle of a note-taking session. The <span id = "important">rubber grip section is comfortable to hold</span>, and the updated rotation mechanism <span id = "important">prevents the pencil’s lead pipe from wiggling.</span>" </p><br> <span id = "important">$7.00 - $9.50</span></td>
+			</tr>
+			<tr>
+				<td valign="middle" align="center"><img id = "elite" src = "https://www.unibrands.co/cdn/shop/products/uniball_MechPencils_KuruTogaElite_0.5MM_Silver_Front_WebImages.jpg?v=1680212719" alt = "Elite." width = "200"> <br><br> Elite </td>
+				<td> 
+					<ul>
+						<li>0.5mm</li>
+					</ul>
+				</td>
+				<td> 14.6cm </td>
+				<td> 9.7mm </td>
+				<td> 0.54oz </td>
+				<td>
+					<ul>
+						<li>Gun Metallic</li>
+						<li style = "color:silver;">Silver</li>
+					</ul>
+				</td>
+				<td> 
+					<ul>
+						 <li><a href = "https://www.amazon.com/Mechanical-Pencil-Starter-Silver-Barrel/dp/B089QC2C8G"> Amazon </a> </li>
+						 <li><a href = "https://www.jetpens.com/search?q=attr_categories_id%3A1129+OR+id%3A39541+OR+id%3A39542"> Jetpens </a> </li>
+						 <li><a href = "https://www.unibrands.co/products/kuru-toga-elite-mechanical-pencils"> Official UNIball Website </a> </li>
+				</td>
+				<td><p>"The Uni Kuru Toga Elite & Roulette have <span id = "important">knurled metal grips</span> that make sure you get a good grasp on them. The metallic finishes on their plastic barrels give them a <span id = "important">luxurious and high-tech feel.</span>"</p><br><span id = "important">$13.50</span></td>
+			</tr>
+			<tr>
+				<td valign="middle" align="center"><img id = "dive" src = "dive.webp" alt = "Dive." width = "200"> <br><br> Dive </td>
+				<td> 
+					<ul>
+						<li>0.5mm</li>
+					</ul>
+				</td>
+				<td> 14.8cm </td>
+				<td> 11.0mm </td>
+				<td> 0.68oz </td>
+				<td>
+					<ul>
+						<li style = "color:darkblue;">Abyss Blue</li>
+						<li style = "color:orange;">Twilight Orange</li>
+						<li style = "color:darkolivegreen;">Dense Green</li>
+					</ul>
+				</td>
+				<td> 
+					<ul>
+						 <li><a href = "https://bungu.store/en-us/products/kuru-toga-dive-0-5mm-mechanical-pencil-mitsubishi-pencil"> Bungu </a> </li>
+						 <li><a href = "https://www.jetpens.com/search?q=attr_categories_id%3A1129+OR+id%3A39541+OR+id%3A39542"> Jetpens </a> </li>
+						 <li><a href = "https://www.unibrands.co/products/kuru-toga-dive"> Official UNIball Website </a> </li>
+				</td>
+				<td><p>"The KURU TOGA DIVE mechanical pencil was designed with the theme of <span id = "important">immersed in writing"</span>, and its name "DIVE" reflects the immersive experience it provides. This remarkable writing instrument has been newly developed using our proprietary patented technology, making it the <span id = "important">world's first pencil with an automatic extension amount adjustment function.</span>"</p><br><span id = "important">$83.00</span></td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
